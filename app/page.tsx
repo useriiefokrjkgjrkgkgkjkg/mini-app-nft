@@ -112,6 +112,51 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center">
         <h1 className="text-white text-6xl font-bold">Soon</h1>
       </main>
+
+      {/* Нижняя навигация */}
+      <nav className="w-full bg-[#17181C] py-2 px-4">
+        <div className="max-w-3xl mx-auto flex items-center justify-between">
+          {/* Market */}
+          <button className="flex flex-col items-center gap-1">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#00A3FF">
+              <path d="M20.5,3L20.34,3.03L15,5.1L9,3L3.36,4.9C3.15,4.97 3,5.15 3,5.38V20.5A0.5,0.5 0 0,0 3.5,21L3.66,20.97L9,18.9L15,21L20.64,19.1C20.85,19.03 21,18.85 21,18.62V3.5A0.5,0.5 0 0,0 20.5,3M10,5.47L14,6.87V18.53L10,17.13V5.47M5,6.46L8,5.45V17.15L5,18.31V6.46M19,17.54L16,18.55V6.86L19,5.7V17.54Z"/>
+            </svg>
+            <span className="text-[#00A3FF] text-xs">Market</span>
+          </button>
+
+          {/* Auctions */}
+          <button className="flex flex-col items-center gap-1">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#8B8B8B">
+              <path d="M17,10.43V2H7V10.43C7,10.79 7.18,11.13 7.47,11.32L11.34,13.8C11.75,14.06 12.25,14.06 12.66,13.8L16.53,11.32C16.82,11.13 17,10.79 17,10.43M7,20H17V17H7V20Z"/>
+            </svg>
+            <span className="text-[#8B8B8B] text-xs">Auctions</span>
+          </button>
+
+          {/* My Gifts */}
+          <button className="flex flex-col items-center gap-1">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#8B8B8B">
+              <path d="M22,12V20A2,2 0 0,1 20,22H4A2,2 0 0,1 2,20V12A1,1 0 0,1 1,11V8A2,2 0 0,1 3,6H6.17C6.06,5.69 6,5.35 6,5A3,3 0 0,1 9,2C10,2 10.88,2.5 11.43,3.24V3.23L12,4L12.57,3.23V3.24C13.12,2.5 14,2 15,2A3,3 0 0,1 18,5C18,5.35 17.94,5.69 17.83,6H21A2,2 0 0,1 23,8V11A1,1 0 0,1 22,12M4,20H11V12H4V20M20,20V12H13V20H20M9,4A1,1 0 0,0 8,5A1,1 0 0,0 9,6A1,1 0 0,0 10,5A1,1 0 0,0 9,4M15,4A1,1 0 0,0 14,5A1,1 0 0,0 15,6A1,1 0 0,0 16,5A1,1 0 0,0 15,4M3,8V10H11V8H3M13,8V10H21V8H13Z"/>
+            </svg>
+            <span className="text-[#8B8B8B] text-xs">My Gifts</span>
+          </button>
+
+          {/* Gallery */}
+          <button className="flex flex-col items-center gap-1">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#8B8B8B">
+              <path d="M22,16V4A2,2 0 0,0 20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16M11,12L13.03,14.71L16,11L20,16H8M2,6V20A2,2 0 0,0 4,22H18V20H4V6"/>
+            </svg>
+            <span className="text-[#8B8B8B] text-xs">Gallery</span>
+          </button>
+
+          {/* Activity */}
+          <button className="flex flex-col items-center gap-1">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#8B8B8B">
+              <path d="M3.5,18.5L9.5,12.5L13.5,16.5L22,6.92L20.59,5.5L13.5,13.5L9.5,9.5L2,17L3.5,18.5Z"/>
+            </svg>
+            <span className="text-[#8B8B8B] text-xs">Activity</span>
+          </button>
+        </div>
+      </nav>
     </div>
   );
 }
