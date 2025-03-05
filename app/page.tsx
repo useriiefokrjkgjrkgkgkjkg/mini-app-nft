@@ -116,11 +116,11 @@ export default function Home() {
       </main>
 
       {/* Нижняя навигация */}
-      <nav className="w-full bg-[#17181C] py-2 px-4">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
+      <nav className="w-full bg-[#17181C] py-3 px-4">
+        <div className="max-w-3xl mx-auto flex items-start justify-between pt-1 pb-2">
           {/* Market */}
           <button 
-            className="flex flex-col items-center gap-1" 
+            className="flex flex-col items-center gap-1.5" 
             onClick={() => setActiveTab('market')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'market' ? "#00A3FF" : "#8B8B8B"}>
@@ -131,7 +131,7 @@ export default function Home() {
 
           {/* Auctions */}
           <button 
-            className="flex flex-col items-center gap-1"
+            className="flex flex-col items-center gap-1.5"
             onClick={() => setActiveTab('auctions')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'auctions' ? "#00A3FF" : "#8B8B8B"}>
@@ -142,7 +142,7 @@ export default function Home() {
 
           {/* My Gifts */}
           <button 
-            className="flex flex-col items-center gap-1"
+            className="flex flex-col items-center gap-1.5"
             onClick={() => setActiveTab('gifts')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'gifts' ? "#00A3FF" : "#8B8B8B"}>
@@ -153,7 +153,7 @@ export default function Home() {
 
           {/* Activity */}
           <button 
-            className="flex flex-col items-center gap-1"
+            className="flex flex-col items-center gap-1.5"
             onClick={() => setActiveTab('activity')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'activity' ? "#00A3FF" : "#8B8B8B"}>
