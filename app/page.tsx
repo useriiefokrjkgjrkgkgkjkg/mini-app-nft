@@ -30,42 +30,44 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black flex flex-col">
       {/* Верхняя панель */}
-      <div className="w-full bg-[#1c1c1e] p-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {/* Логотип и счетчик */}
-          <div className="flex items-center bg-[#2c2c30] rounded-lg px-3 py-2">
-            <svg className="w-6 h-6 text-[#00A3FF]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z"/>
-            </svg>
-            <span className="text-white ml-2 mr-1">0</span>
-            <svg className="w-4 h-4 text-white opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-            </svg>
+      <div className="w-full bg-[#1c1c1e] p-2 flex items-center justify-center">
+        <div className="max-w-3xl w-full flex items-center justify-between px-4 py-1">
+          <div className="flex items-center gap-1.5">
+            {/* Логотип и счетчик */}
+            <div className="flex items-center bg-[#2c2c30] rounded-xl h-[38px] px-3">
+              <svg className="w-5 h-5 text-[#00A3FF]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z"/>
+              </svg>
+              <span className="text-white text-sm ml-2 mr-1">0</span>
+              <svg className="w-4 h-4 text-white opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+
+            {/* Кнопки + и - */}
+            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light">
+              +
+            </button>
+            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light">
+              −
+            </button>
+            
+            {/* Кнопка профиля */}
+            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </button>
           </div>
 
-          {/* Кнопки + и - */}
-          <button className="w-12 h-12 bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-2xl">
-            +
-          </button>
-          <button className="w-12 h-12 bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-2xl">
-            -
-          </button>
-          
-          {/* Кнопка профиля */}
-          <button className="w-12 h-12 bg-[#00A3FF] rounded-full flex items-center justify-center">
-            <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+          {/* Кнопка Connect Wallet */}
+          <button className="bg-[#00A3FF] text-white h-[38px] px-4 rounded-full flex items-center gap-2 text-sm">
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z"/>
             </svg>
+            Connect Wallet
           </button>
         </div>
-
-        {/* Кнопка Connect Wallet */}
-        <button className="bg-[#00A3FF] text-white px-6 py-3 rounded-full flex items-center gap-2">
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z"/>
-          </svg>
-          Connect Wallet
-        </button>
       </div>
 
       {/* Основной контент */}
