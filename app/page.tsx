@@ -156,8 +156,13 @@ export default function Home() {
             <h1 className="text-white text-6xl font-bold">Soon</h1>
           </div>
         ) : activeTab === 'gifts' ? (
-          <div className="w-full animate-slide-in-right">
-            <div className="flex-1"></div>
+          <div className="animate-slide-in-right">
+            <div className="bg-[#1E2124] p-4 mb-4 rounded-lg">
+              <p className="text-gray-300">Want to sell your Gift? Transfer it to <span className="text-[#00A6FF]">@GiftRelayer</span></p>
+            </div>
+            <div className="flex justify-between items-center mb-4">
+              <div className="flex-1"></div>
+            </div>
           </div>
         ) : (
           <div className="flex flex-col items-center gap-4 animate-slide-in-left">
