@@ -124,7 +124,7 @@ export default function Home() {
             onClick={() => setActiveTab('market')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'market' ? "#00A3FF" : "#8B8B8B"}>
-              <path d="M20.5,3L20.34,3.03L15,5.1L9,3L3.36,4.9C3.15,4.97 3,5.15 3,5.38V20.5A0.5,0.5 0 0,0 3.5,21L3.66,20.97L9,18.9L15,21L20.64,19.1C20.85,19.03 21,18.85 21,18.62V3.5A0.5,0.5 0 0,0 20.5,3M10,5.47L14,6.87V18.53L10,17.13V5.47M5,6.46L8,5.45V17.15L5,18.31V6.46M19,17.54L16,18.55V6.86L19,5.7V17.54Z"/>
+              <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM4 5V19H20V5H4ZM9 8H7V10H9V8ZM7 12H9V14H7V12ZM9 16H7V18H9V16ZM13 8H11V10H13V8ZM11 12H13V14H11V12ZM13 16H11V18H13V16ZM17 8H15V10H17V8ZM15 12H17V14H15V12ZM17 16H15V18H17V16Z"/>
             </svg>
             <span className={activeTab === 'market' ? "text-[#00A3FF] text-xs" : "text-[#8B8B8B] text-xs"}>Market</span>
           </button>
@@ -135,7 +135,7 @@ export default function Home() {
             onClick={() => setActiveTab('auctions')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'auctions' ? "#00A3FF" : "#8B8B8B"}>
-              <path d="M17,10.43V2H7V10.43C7,10.79 7.18,11.13 7.47,11.32L11.34,13.8C11.75,14.06 12.25,14.06 12.66,13.8L16.53,11.32C16.82,11.13 17,10.79 17,10.43M7,20H17V17H7V20Z"/>
+              <path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM12 3.311L4.5 7.65311V16.3469L12 20.689L19.5 16.3469V7.65311L12 3.311ZM12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16ZM12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"/>
             </svg>
             <span className={activeTab === 'auctions' ? "text-[#00A3FF] text-xs" : "text-[#8B8B8B] text-xs"}>Auctions</span>
           </button>
@@ -146,7 +146,7 @@ export default function Home() {
             onClick={() => setActiveTab('gifts')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'gifts' ? "#00A3FF" : "#8B8B8B"}>
-              <path d="M22,12V20A2,2 0 0,1 20,22H4A2,2 0 0,1 2,20V12A1,1 0 0,1 1,11V8A2,2 0 0,1 3,6H6.17C6.06,5.69 6,5.35 6,5A3,3 0 0,1 9,2C10,2 10.88,2.5 11.43,3.24V3.23L12,4L12.57,3.23V3.24C13.12,2.5 14,2 15,2A3,3 0 0,1 18,5C18,5.35 17.94,5.69 17.83,6H21A2,2 0 0,1 23,8V11A1,1 0 0,1 22,12M4,20H11V12H4V20M20,20V12H13V20H20M9,4A1,1 0 0,0 8,5A1,1 0 0,0 9,6A1,1 0 0,0 10,5A1,1 0 0,0 9,4M15,4A1,1 0 0,0 14,5A1,1 0 0,0 15,6A1,1 0 0,0 16,5A1,1 0 0,0 15,4M3,8V10H11V8H3M13,8V10H21V8H13Z"/>
+              <path d="M20 7H16.83C17.92 5.91 18.24 4.25 17.65 2.83C17.06 1.41 15.76 0.5 14.25 0.5C13.38 0.5 12.54 0.82 11.86 1.42L10 3.28L8.14 1.42C7.46 0.82 6.62 0.5 5.75 0.5C4.24 0.5 2.94 1.41 2.35 2.83C1.76 4.25 2.08 5.91 3.17 7H0V13H2V22H22V13H24V7H20ZM14.25 2.5C14.66 2.5 15.05 2.69 15.3 3.01C15.55 3.33 15.63 3.75 15.52 4.14C15.26 5 14.29 5.87 13.17 6.56C12.25 5.22 12.07 3.61 12.71 2.83C13 2.5 13.61 2.5 14.25 2.5ZM5.75 2.5C6.39 2.5 7 2.5 7.29 2.83C7.93 3.61 7.75 5.22 6.83 6.56C5.71 5.87 4.74 5 4.48 4.14C4.37 3.75 4.45 3.33 4.7 3.01C4.95 2.69 5.34 2.5 5.75 2.5ZM2 11H11V9H2V11ZM4 20V13H11V20H4ZM20 20H13V13H20V20ZM22 11H13V9H22V11Z"/>
             </svg>
             <span className={activeTab === 'gifts' ? "text-[#00A3FF] text-xs" : "text-[#8B8B8B] text-xs"}>My Gifts</span>
           </button>
@@ -157,7 +157,7 @@ export default function Home() {
             onClick={() => setActiveTab('activity')}
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill={activeTab === 'activity' ? "#00A3FF" : "#8B8B8B"}>
-              <path d="M3.5,18.5L9.5,12.5L13.5,16.5L22,6.92L20.59,5.5L13.5,13.5L9.5,9.5L2,17L3.5,18.5Z"/>
+              <path d="M21 20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V20ZM19 19V5H5V19H19ZM8 11H11V17H13V11H16L12 7L8 11Z"/>
             </svg>
             <span className={activeTab === 'activity' ? "text-[#00A3FF] text-xs" : "text-[#8B8B8B] text-xs"}>Activity</span>
           </button>
