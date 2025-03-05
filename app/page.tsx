@@ -85,54 +85,69 @@ export default function Home() {
       </div>
 
       {/* Панель фильтров */}
-      <div className="w-full bg-black px-4 py-2 flex items-center justify-between">
-        {/* NFTs и Model фильтры */}
-        <div className="flex items-center gap-2">
-          {/* NFTs фильтр */}
-          <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
-            <div className="flex flex-col">
-              <span className="text-[#8B8B8B] text-xs">NFTs</span>
-              <span className="text-white text-sm">All</span>
+      {activeTab !== 'gifts' && (
+        <div className="w-full bg-black px-4 py-2 flex items-center justify-between">
+          {/* NFTs и Model фильтры */}
+          <div className="flex items-center gap-2">
+            {/* NFTs фильтр */}
+            <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
+              <div className="flex flex-col">
+                <span className="text-[#8B8B8B] text-xs">NFTs</span>
+                <span className="text-white text-sm">All</span>
+              </div>
+              <svg className="w-4 h-4 text-white opacity-60 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+              </svg>
             </div>
-            <svg className="w-4 h-4 text-white opacity-60 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-            </svg>
+
+            {/* Model фильтр */}
+            <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
+              <div className="flex flex-col">
+                <span className="text-[#8B8B8B] text-xs">Model</span>
+                <span className="text-white text-sm">All</span>
+              </div>
+              <svg className="w-4 h-4 text-white opacity-60 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
           </div>
 
-          {/* Model фильтр */}
-          <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
-            <div className="flex flex-col">
-              <span className="text-[#8B8B8B] text-xs">Model</span>
-              <span className="text-white text-sm">All</span>
-            </div>
-            <svg className="w-4 h-4 text-white opacity-60 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-            </svg>
+          {/* Кнопки справа */}
+          <div className="flex items-center gap-2 -ml-2">
+            {/* Кнопка удаления */}
+            <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth={2} strokeLinecap="round"/>
+              </svg>
+            </button>
+
+            {/* Кнопка действия */}
+            <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
           </div>
         </div>
-
-        {/* Кнопки справа */}
-        <div className="flex items-center gap-2 -ml-2">
-          {/* Кнопка удаления */}
-          <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
-            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none">
-              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth={2} strokeLinecap="round"/>
-            </svg>
-          </button>
-
-          {/* Кнопка действия */}
-          <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
-            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-        </div>
-      </div>
+      )}
 
       {/* Основной контент */}
       <main className="flex-1 flex items-center justify-center">
         {activeTab === 'market' ? (
           <h1 className="text-white text-6xl font-bold">Soon</h1>
+        ) : activeTab === 'gifts' ? (
+          <div className="w-full max-w-3xl mx-auto px-4">
+            <div className="bg-[#17181C] rounded-2xl p-1">
+              <div className="grid grid-cols-2 gap-1">
+                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-[#00A3FF] text-lg font-medium">
+                  Listed Gifts
+                </button>
+                <button className="py-3 px-4 rounded-xl text-white/60 text-lg font-medium">
+                  Unlisted Gifts
+                </button>
+              </div>
+            </div>
+          </div>
         ) : (
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-white text-6xl font-bold capitalize">{activeTab}</h1>
