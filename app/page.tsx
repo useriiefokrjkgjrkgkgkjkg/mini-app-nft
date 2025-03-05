@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black flex flex-col">
       {/* Верхняя панель */}
-      <div className="w-full bg-[#1c1c1e] p-2 flex items-center justify-center">
+      <div className="w-full bg-black p-2 flex items-center justify-center">
         <div className="max-w-3xl w-full flex items-center justify-between px-4 py-1">
           <div className="flex items-center gap-1.5">
             {/* Логотип и счетчик */}
