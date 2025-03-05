@@ -66,16 +66,16 @@ export default function Home() {
             </div>
 
             {/* Кнопки + и - */}
-            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light">
+            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light glow-effect">
               +
             </button>
-            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light">
+            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light glow-effect">
               −
             </button>
           </div>
 
           {/* Кнопка Connect Wallet */}
-          <button className="bg-[#00A3FF] text-white h-[38px] px-4 rounded-full flex items-center gap-2 text-sm mr-2">
+          <button className="bg-[#00A3FF] text-white h-[38px] px-4 rounded-full flex items-center gap-2 text-sm mr-2 glow-effect">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="white">
               <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z"/>
             </svg>
@@ -90,10 +90,10 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-[#17181C] rounded-2xl p-1">
               <div className="grid grid-cols-2 gap-1">
-                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium">
+                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium glow-effect">
                   Listed Gifts
                 </button>
-                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium">
+                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium glow-effect">
                   Unlisted Gifts
                 </button>
               </div>
@@ -177,7 +177,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto flex items-start justify-between pt-2 pb-2">
           {/* Market */}
           <button 
-            className={`flex flex-col items-center gap-2 ${activeTab === 'market' ? 'active-tab-indicator' : ''}`}
+            className={`flex flex-col items-center gap-2 nav-button ${activeTab === 'market' ? 'active-tab-indicator' : ''}`}
             onClick={() => setActiveTab('market')}
           >
             <div className={`transition-transform duration-200 ${activeTab === 'market' ? 'scale-110' : ''}`}>
@@ -190,7 +190,7 @@ export default function Home() {
 
           {/* Auctions */}
           <button 
-            className={`flex flex-col items-center gap-2 ${activeTab === 'auctions' ? 'active-tab-indicator' : ''}`}
+            className={`flex flex-col items-center gap-2 nav-button ${activeTab === 'auctions' ? 'active-tab-indicator' : ''}`}
             onClick={() => setActiveTab('auctions')}
           >
             <div className={`transition-transform duration-200 ${activeTab === 'auctions' ? 'scale-110' : ''}`}>
@@ -203,7 +203,7 @@ export default function Home() {
 
           {/* My Gifts */}
           <button 
-            className={`flex flex-col items-center gap-2 ${activeTab === 'gifts' ? 'active-tab-indicator' : ''}`}
+            className={`flex flex-col items-center gap-2 nav-button ${activeTab === 'gifts' ? 'active-tab-indicator' : ''}`}
             onClick={() => setActiveTab('gifts')}
           >
             <div className={`transition-transform duration-200 ${activeTab === 'gifts' ? 'scale-110' : ''}`}>
@@ -216,7 +216,7 @@ export default function Home() {
 
           {/* Activity */}
           <button 
-            className={`flex flex-col items-center gap-2 ${activeTab === 'activity' ? 'active-tab-indicator' : ''}`}
+            className={`flex flex-col items-center gap-2 nav-button ${activeTab === 'activity' ? 'active-tab-indicator' : ''}`}
             onClick={() => setActiveTab('activity')}
           >
             <div className={`transition-transform duration-200 ${activeTab === 'activity' ? 'scale-110' : ''}`}>
