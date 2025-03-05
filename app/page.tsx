@@ -84,6 +84,24 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Переключатели для вкладки Gifts */}
+      {activeTab === 'gifts' && (
+        <div className="w-full bg-black px-4 py-2">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-[#17181C] rounded-2xl p-1">
+              <div className="grid grid-cols-2 gap-1">
+                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium">
+                  Listed Gifts
+                </button>
+                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium">
+                  Unlisted Gifts
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Панель фильтров */}
       {activeTab !== 'gifts' && (
         <div className="w-full bg-black px-4 py-2 flex items-center justify-between">
@@ -136,18 +154,7 @@ export default function Home() {
         {activeTab === 'market' ? (
           <h1 className="text-white text-6xl font-bold">Soon</h1>
         ) : activeTab === 'gifts' ? (
-          <div className="w-full max-w-3xl mx-auto px-4">
-            <div className="bg-[#17181C] rounded-2xl p-1">
-              <div className="grid grid-cols-2 gap-1">
-                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-[#00A3FF] text-lg font-medium">
-                  Listed Gifts
-                </button>
-                <button className="py-3 px-4 rounded-xl text-white/60 text-lg font-medium">
-                  Unlisted Gifts
-                </button>
-              </div>
-            </div>
-          </div>
+          <div className="flex-1"></div>
         ) : (
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-white text-6xl font-bold capitalize">{activeTab}</h1>
