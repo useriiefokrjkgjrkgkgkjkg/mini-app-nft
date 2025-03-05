@@ -158,7 +158,7 @@ export default function Home() {
         ) : activeTab === 'gifts' ? (
           <div className="animate-slide-in-right w-full">
             <div className="bg-[#1E2124] p-4 mb-4 rounded-lg">
-              <p className="text-gray-300">Want to sell your Gift? Transfer it to <span className="text-[#00A6FF]">@GiftRelayer</span></p>
+              <p className="text-gray-300">Want to sell your Gift? Transfer it to <span className="text-[#00A6FF]">@GiftRelayer</span> now</p>
             </div>
             <div className="flex justify-between items-center">
               <div className="flex-1"></div>
