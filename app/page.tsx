@@ -64,13 +64,13 @@ export default function Home() {
       </div>
 
       {/* Панель фильтров */}
-      <div className="w-full bg-black px-4 py-3 flex items-center justify-center gap-3">
-        <div className="flex items-center gap-3">
+      <div className="w-full bg-black px-4 py-2 flex items-center justify-center gap-2">
+        <div className="flex items-center gap-2">
           {/* NFTs фильтр */}
-          <div className="bg-[#2c2c30] rounded-xl px-4 py-2.5 flex items-center justify-between min-w-[180px]">
+          <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[140px]">
             <div className="flex flex-col">
-              <span className="text-[#8B8B8B] text-sm">NFTs</span>
-              <span className="text-white font-medium">All</span>
+              <span className="text-[#8B8B8B] text-xs">NFTs</span>
+              <span className="text-white text-sm">All</span>
             </div>
             <svg className="w-4 h-4 text-white opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 15l5-5 5 5"/>
@@ -78,10 +78,10 @@ export default function Home() {
           </div>
 
           {/* Model фильтр */}
-          <div className="bg-[#2c2c30] rounded-xl px-4 py-2.5 flex items-center justify-between min-w-[180px]">
+          <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[140px]">
             <div className="flex flex-col">
-              <span className="text-[#8B8B8B] text-sm">Model</span>
-              <span className="text-white font-medium">All</span>
+              <span className="text-[#8B8B8B] text-xs">Model</span>
+              <span className="text-white text-sm">All</span>
             </div>
             <svg className="w-4 h-4 text-white opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 15l5-5 5 5"/>
@@ -90,8 +90,8 @@ export default function Home() {
         </div>
 
         {/* Кнопка действия */}
-        <button className="w-[38px] h-[38px] bg-[#2c2c30] rounded-full flex items-center justify-center">
-          <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
