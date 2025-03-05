@@ -1,4 +1,37 @@
-// ... existing code ...
+'use client';
+
+import React, { useEffect } from 'react';
+
+declare global {
+  interface Window {
+    Telegram: {
+      WebApp: {
+        ready: () => void;
+        expand: () => void;
+        MainButton: {
+          text: string;
+          show: () => void;
+          hide: () => void;
+          onClick: (callback: () => void) => void;
+        };
+      };
+    };
+  }
+}
+
+export default function Home() {
+  useEffect(() => {
+    if (window.Telegram?.WebApp) {
+      window.Telegram.WebApp.ready();
+      window.Telegram.WebApp.expand();
+    }
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black flex flex-col">
+      {/* Верхняя панель */}
+      <div className="w-full bg-[#1c1c1e] p-2 flex items-center justify-center">
+        <div className="max-w-3xl w-full flex items-center justify-between px-4 py-1">
           <div className="flex items-center gap-1.5">
             {/* Логотип и счетчик */}
             <div className="flex items-center bg-[#2c2c30] rounded-xl h-[38px] px-3">
@@ -27,4 +60,13 @@
             </svg>
             Connect Wallet
           </button>
-// ... existing code ...
+        </div>
+      </div>
+
+      {/* Основной контент */}
+      <main className="flex-1 flex items-center justify-center">
+        <h1 className="text-white text-6xl font-bold">Soon</h1>
+      </main>
+    </div>
+  );
+}
