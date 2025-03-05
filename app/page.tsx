@@ -40,7 +40,7 @@ export default function Home() {
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-white text-4xl font-bold animate-fade-up">
-            NFT Market
+            NFT Market Place
           </h1>
           <div className="h-1 w-24 bg-[#00A3FF] mx-auto mt-4 animate-loading-bar"></div>
         </div>
