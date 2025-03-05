@@ -51,13 +51,6 @@ export default function Home() {
             <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center text-white text-xl font-light">
               −
             </button>
-            
-            {/* Кнопка профиля */}
-            <button className="w-[38px] h-[38px] bg-[#00A3FF] rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>
-            </button>
           </div>
 
           {/* Кнопка Connect Wallet */}
