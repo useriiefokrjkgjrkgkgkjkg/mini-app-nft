@@ -52,8 +52,8 @@ export default function Home() {
     <div className="min-h-screen bg-black flex flex-col animate-fade-in">
       {/* Верхняя панель */}
       <div className="w-full bg-black p-2 flex items-center justify-center">
-        <div className="max-w-3xl w-full flex items-center justify-between px-4 py-1">
-          <div className="flex items-center gap-1.5">
+        <div className="max-w-3xl w-full flex items-center justify-between px-0">
+          <div className="flex items-center gap-1.5 pl-2">
             {/* Логотип и счетчик */}
             <div className="flex items-center bg-[#2c2c30] rounded-xl h-[38px] px-3">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="white">
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
 
           {/* Кнопка Connect Wallet */}
-          <button className="bg-[#00A3FF] text-white h-[38px] px-4 rounded-full flex items-center gap-2 text-sm">
+          <button className="bg-[#00A3FF] text-white h-[38px] px-4 rounded-full flex items-center gap-2 text-sm mr-2">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="white">
               <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z"/>
             </svg>
