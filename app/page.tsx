@@ -63,6 +63,40 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Панель фильтров */}
+      <div className="w-full bg-black px-4 py-3 flex items-center justify-center gap-3">
+        <div className="flex items-center gap-3">
+          {/* NFTs фильтр */}
+          <div className="bg-[#2c2c30] rounded-xl px-4 py-2.5 flex items-center justify-between min-w-[180px]">
+            <div className="flex flex-col">
+              <span className="text-[#8B8B8B] text-sm">NFTs</span>
+              <span className="text-white font-medium">All</span>
+            </div>
+            <svg className="w-4 h-4 text-white opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 15l5-5 5 5"/>
+            </svg>
+          </div>
+
+          {/* Model фильтр */}
+          <div className="bg-[#2c2c30] rounded-xl px-4 py-2.5 flex items-center justify-between min-w-[180px]">
+            <div className="flex flex-col">
+              <span className="text-[#8B8B8B] text-sm">Model</span>
+              <span className="text-white font-medium">All</span>
+            </div>
+            <svg className="w-4 h-4 text-white opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 15l5-5 5 5"/>
+            </svg>
+          </div>
+        </div>
+
+        {/* Кнопка действия */}
+        <button className="w-[38px] h-[38px] bg-[#2c2c30] rounded-full flex items-center justify-center">
+          <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+      </div>
+
       {/* Основной контент */}
       <main className="flex-1 flex items-center justify-center">
         <h1 className="text-white text-6xl font-bold">Soon</h1>
