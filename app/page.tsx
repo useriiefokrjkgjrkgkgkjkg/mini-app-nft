@@ -64,8 +64,15 @@ export default function Home() {
       </div>
 
       {/* Панель фильтров */}
-      <div className="w-full bg-black px-4 py-2 flex items-start">
+      <div className="w-full bg-black px-4 py-2 flex items-center justify-between">
         <div className="flex items-center gap-2">
+          {/* Кнопка действия */}
+          <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
+            <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
           {/* NFTs фильтр */}
           <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
             <div className="flex flex-col">
@@ -87,14 +94,18 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
             </svg>
           </div>
-
-          {/* Кнопка действия */}
-          <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
-            <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
         </div>
+
+        {/* Кнопка удаления */}
+        <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-3 13H8L5 7"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h16"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 11v6"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 11v6"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7l1-4h6l1 4"/>
+          </svg>
+        </button>
       </div>
 
       {/* Основной контент */}
