@@ -21,16 +21,35 @@ declare global {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('market');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (window.Telegram?.WebApp) {
       window.Telegram.WebApp.ready();
       window.Telegram.WebApp.expand();
     }
+    
+    // Имитируем загрузку
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-white text-4xl font-bold animate-fade-up">
+            NFT Market
+          </h1>
+          <div className="h-1 w-24 bg-[#00A3FF] mx-auto mt-4 animate-loading-bar"></div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-black flex flex-col">
+    <div className="min-h-screen bg-black flex flex-col animate-fade-in">
       {/* Верхняя панель */}
       <div className="w-full bg-black p-2 flex items-center justify-center">
         <div className="max-w-3xl w-full flex items-center justify-between px-4 py-1">
