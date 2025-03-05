@@ -112,7 +112,14 @@ export default function Home() {
 
       {/* Основной контент */}
       <main className="flex-1 flex items-center justify-center">
-        <h1 className="text-white text-6xl font-bold">Soon</h1>
+        {activeTab === 'market' ? (
+          <h1 className="text-white text-6xl font-bold">Soon</h1>
+        ) : (
+          <div className="flex flex-col items-center gap-4">
+            <h1 className="text-white text-6xl font-bold capitalize">{activeTab}</h1>
+            <p className="text-[#8B8B8B] text-xl">Вкладка еще не готова</p>
+          </div>
+        )}
       </main>
 
       {/* Нижняя навигация */}
