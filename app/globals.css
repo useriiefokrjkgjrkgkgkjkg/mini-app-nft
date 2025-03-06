@@ -28,19 +28,41 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Улучшенные стили для кнопок */
 button {
-  transition: all 0.15s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
   opacity: 0.95;
+  transform: translateY(-1px);
 }
 
 button:active {
-  transform: scale(0.97);
+  transform: scale(0.95);
 }
 
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+  pointer-events: none;
+}
+
+button:active::after {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+/* Анимации */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -54,16 +76,20 @@ button:active {
 
 @keyframes loadingBar {
   0% {
-    width: 0;
-    opacity: 1;
+    transform: scaleX(0);
+    transform-origin: left;
   }
   50% {
-    width: 100%;
-    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
   }
   100% {
-    width: 100%;
-    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
   }
 }
 
@@ -87,14 +113,36 @@ button:active {
   }
 }
 
-@keyframes scaleIn {
+@keyframes slideInRight {
   from {
-    transform: scale(0.8);
     opacity: 0;
+    transform: translateX(30px);
   }
   to {
-    transform: scale(1);
     opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -133,24 +181,33 @@ button:active {
   }
 }
 
+/* Классы анимаций */
 .animate-fade-up {
-  animation: fadeUp 0.6s ease-out forwards;
+  animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .animate-loading-bar {
-  animation: loadingBar 1.5s ease-in-out forwards;
+  animation: loadingBar 2s infinite;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .animate-slide-in {
   animation: slideIn 0.5s ease-out forwards;
 }
 
+.animate-slide-in-right {
+  animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .animate-scale-in {
-  animation: scaleIn 0.4s ease-out forwards;
+  animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-rotate-in {
@@ -190,4 +247,72 @@ a, button, input, select, textarea {
 .scroll-fade.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Стили для активных элементов */
+.active-tab-indicator {
+  position: relative;
+}
+
+.active-tab-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #00A3FF;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: dotPulse 1.5s infinite;
+}
+
+@keyframes dotPulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Анимация для кнопок навигации */
+.nav-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+/* Эффект свечения для активных элементов */
+.glow-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,163,255,0.1) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-effect:hover::before {
+  transform: scale(1);
 }

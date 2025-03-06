@@ -84,77 +84,46 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Переключатели для вкладки Gifts */}
-      {activeTab === 'gifts' && (
-        <div className="w-full bg-black px-4 py-2">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-[#17181C] rounded-2xl p-1">
-              <div className="grid grid-cols-2 gap-1">
-                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium">
-                  Listed Gifts
-                </button>
-                <button className="py-3 px-4 rounded-xl bg-[#2C2C30] text-white text-lg font-medium">
-                  Unlisted Gifts
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Панель фильтров */}
-      {activeTab !== 'gifts' && (
-        <div className="w-full bg-black px-4 py-2 flex items-center justify-between">
-          {/* NFTs и Model фильтры */}
-          <div className="flex items-center gap-2">
-            {/* NFTs фильтр */}
-            <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
-              <div className="flex flex-col">
-                <span className="text-[#8B8B8B] text-xs">NFTs</span>
-                <span className="text-white text-sm">All</span>
-              </div>
-              <svg className="w-4 h-4 text-white opacity-60 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-
-            {/* Model фильтр */}
-            <div className="bg-[#2c2c30] rounded-xl px-3 py-2 flex items-center justify-between min-w-[120px]">
-              <div className="flex flex-col">
-                <span className="text-[#8B8B8B] text-xs">Model</span>
-                <span className="text-white text-sm">All</span>
-              </div>
-              <svg className="w-4 h-4 text-white opacity-60 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-          </div>
-
-          {/* Кнопки справа */}
-          <div className="flex items-center gap-2 -ml-2">
-            {/* Кнопка удаления */}
-            <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none">
-                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth={2} strokeLinecap="round"/>
-              </svg>
-            </button>
-
-            {/* Кнопка действия */}
-            <button className="w-[34px] h-[34px] bg-[#2c2c30] rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-          </div>
+      <div className="w-full bg-black px-4 py-2">
+        <div className="flex justify-center gap-4">
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              activeTab === 'all'
+                ? 'bg-[#00A3FF] text-white'
+                : 'bg-gray-800 text-gray-400'
+            } hover:bg-[#00A3FF] hover:text-white transition-all`}
+            onClick={() => setActiveTab('all')}
+          >
+            All Items
+          </button>
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              activeTab === 'art'
+                ? 'bg-[#00A3FF] text-white'
+                : 'bg-gray-800 text-gray-400'
+            } hover:bg-[#00A3FF] hover:text-white transition-all`}
+            onClick={() => setActiveTab('art')}
+          >
+            Art
+          </button>
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              activeTab === 'gaming'
+                ? 'bg-[#00A3FF] text-white'
+                : 'bg-gray-800 text-gray-400'
+            } hover:bg-[#00A3FF] hover:text-white transition-all`}
+            onClick={() => setActiveTab('gaming')}
+          >
+            Gaming
+          </button>
         </div>
-      )}
+      </div>
 
       {/* Основной контент */}
       <main className="flex-1 flex items-center justify-center">
         {activeTab === 'market' ? (
           <h1 className="text-white text-6xl font-bold">Soon</h1>
-        ) : activeTab === 'gifts' ? (
-          <div className="flex-1"></div>
         ) : (
           <div className="flex flex-col items-center gap-4">
             <h1 className="text-white text-6xl font-bold capitalize">{activeTab}</h1>
@@ -188,24 +157,13 @@ export default function Home() {
             <span className={activeTab === 'auctions' ? "text-[#00A3FF] text-sm" : "text-[#8B8B8B] text-sm"}>Auctions</span>
           </button>
 
-          {/* My Gifts */}
-          <button 
-            className="flex flex-col items-center gap-2"
-            onClick={() => setActiveTab('gifts')}
-          >
-            <svg className="w-7 h-7" viewBox="0 0 24 24" fill={activeTab === 'gifts' ? "#00A3FF" : "#8B8B8B"}>
-              <path d="M20 7H16.83C17.92 5.91 18.24 4.25 17.65 2.83C17.06 1.41 15.76 0.5 14.25 0.5C13.38 0.5 12.54 0.82 11.86 1.42L10 3.28L8.14 1.42C7.46 0.82 6.62 0.5 5.75 0.5C4.24 0.5 2.94 1.41 2.35 2.83C1.76 4.25 2.08 5.91 3.17 7H0V13H2V22H22V13H24V7H20ZM14.25 2.5C14.66 2.5 15.05 2.69 15.3 3.01C15.55 3.33 15.63 3.75 15.52 4.14C15.26 5 14.29 5.87 13.17 6.56C12.25 5.22 12.07 3.61 12.71 2.83C13 2.5 13.61 2.5 14.25 2.5ZM5.75 2.5C6.39 2.5 7 2.5 7.29 2.83C7.93 3.61 7.75 5.22 6.83 6.56C5.71 5.87 4.74 5 4.48 4.14C4.37 3.75 4.45 3.33 4.7 3.01C4.95 2.69 5.34 2.5 5.75 2.5ZM2 11H11V9H2V11ZM4 20V13H11V20H4ZM20 20H13V13H20V20ZM22 11H13V9H22V11Z"/>
-            </svg>
-            <span className={activeTab === 'gifts' ? "text-[#00A3FF] text-sm" : "text-[#8B8B8B] text-sm"}>My Gifts</span>
-          </button>
-
           {/* Activity */}
           <button 
             className="flex flex-col items-center gap-2"
             onClick={() => setActiveTab('activity')}
           >
             <svg className="w-7 h-7" viewBox="0 0 24 24" fill={activeTab === 'activity' ? "#00A3FF" : "#8B8B8B"}>
-              <path d="M21 20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V20ZM19 19V5H5V19H19ZM8 11H11V17H13V11H16L12 7L8 11Z"/>
+              <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20ZM13 7H11V13H17V11H13V7Z"/>
             </svg>
             <span className={activeTab === 'activity' ? "text-[#00A3FF] text-sm" : "text-[#8B8B8B] text-sm"}>Activity</span>
           </button>
