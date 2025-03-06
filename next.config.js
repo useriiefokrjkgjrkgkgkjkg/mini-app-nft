@@ -5,10 +5,8 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   experimental: {
-    optimizeCss: true,
     turbo: {
       rules: {
-        // Opt-in to our production application rules
         '*.css': ['postcss-loader'],
       },
     },
