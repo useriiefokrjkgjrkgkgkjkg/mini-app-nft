@@ -1,2 +1,2 @@
-import Marketplace from './marketplace';
-export default Marketplace;
+import Test from './test';
+export default Test;
