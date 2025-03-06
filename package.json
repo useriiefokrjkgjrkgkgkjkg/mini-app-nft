@@ -24,12 +24,8 @@
     "tailwindcss": "^3.3.0",
     "typescript": "^5.0.0",
     "@tailwindcss/forms": "^0.5.0",
-<<<<<<< HEAD
     "@tailwindcss/typography": "^0.5.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "14.1.0"
-=======
-    "@tailwindcss/typography": "^0.5.0"
->>>>>>> 2e3dde65162734c502d8e4ac1ec21fd82cb40bf5
   }
 }
