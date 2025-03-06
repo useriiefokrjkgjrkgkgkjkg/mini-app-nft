@@ -2,6 +2,25 @@
 
 import React, { useEffect, useState } from 'react';
 
+interface TelegramWebApp {
+  ready: () => void;
+  expand: () => void;
+  MainButton: {
+    text: string;
+    show: () => void;
+    hide: () => void;
+    onClick: (callback: () => void) => void;
+  };
+}
+
+declare global {
+  interface Window {
+    Telegram?: {
+      WebApp: TelegramWebApp;
+    };
+  }
+}
+
 export default function Marketplace() {
   const [activeTab, setActiveTab] = useState('market');
   const [loading, setLoading] = useState(true);
